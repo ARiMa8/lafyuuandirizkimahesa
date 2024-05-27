@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <!--  search fav notif-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/flash_sale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="30dp"
+            android:text="Nike Air Max 270 Read..."
+            android:fontFamily="@font/poppins_bold"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_explore" />
+
+        <ImageView
+            android:id="@+id/ic_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_more" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/detail_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="-15dp"
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/detail_product" />
+
+                <ImageView
+                    android:layout_width="372dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_image"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="7dp"
+                    android:src="@drawable/slideshow" />
+
+                <ImageView
+                    android:id="@+id/ic_slideshow"
+                    android:layout_width="372dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_image"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="7dp"
+                    android:src="@drawable/slideshow" />
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_slideshow"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="37dp"
+                    android:layout_toStartOf="@id/love"
+                    android:text="Nike Air Zoom Pegasus 36 Miami"
+                    android:textStyle="bold"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/love"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_slideshow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/love" />
+
+                <RatingBar
+                    android:id="@+id/rating_product"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_name"
+                    android:layout_alignStart="@id/product_name"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-49dp"
+                    android:layout_marginEnd="200dp"
+                    android:numStars="5"
+                    android:rating="4"
+                    android:scaleX="0.55"
+                    android:scaleY="0.55"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rating_product"
+                    android:layout_alignStart="@id/rating_product"
+                    android:layout_marginStart="45dp"
+                    android:text="$299,43"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/select_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_price"
+                    android:layout_alignParentStart="true"
+                    android:text="Select Size"
+
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/size_six"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/size_sixdotfive"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/size_seven"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/size_sevendotfive"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/size_eight"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/size_eightdotfive"
+                        />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/select_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Color"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/color_yellow"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/color_blue"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/color_red"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/color_green"
+                       />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/color_purple"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/color_dark"
+                        />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_specification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specification"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/color_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Shown:"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/show_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laser"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"/>
+
+                <TextView
+                    android:id="@+id/show_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blue/Anthracite/Watermelon/White"
+                    android:textSize="16sp"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:layout_marginTop="25dp"
+                    android:gravity="end"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Style:"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="CD0113-400"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:text="The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience."
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/review_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Review Product"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/seemore_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="See More"
+                    android:textColor="@color/primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pp_reviewer"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <RatingBar
+                    android:id="@+id/rating_user"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="145dp"
+                    android:numStars="5"
+                    android:rating="4"
+                    android:scaleX="0.55"
+                    android:scaleY="0.55"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/review_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="85dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="4.5 (5 Review)"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/detail_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:text="air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites."
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/reviewed_image1"
+                        android:layout_marginRight="10dp"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/reviewed_image2"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/reviewed_image3"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/date_reviewed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="8dp"
+                    android:text="December 10, 2016"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/also_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginTop="10dp"
+                    android:text="You Might Also Like"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!--tas nike-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:src="@drawable/shoe_yellow"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:gravity="center_horizontal"
+                                android:text="FS - Nike Air Max 270 React..."
+                                android:fontFamily="@font/poppins_bold"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:gravity="center_horizontal"
+                                android:text="$299,43"
+                                android:textColor="@color/primary"
+                                android:layout_marginTop="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="534,33" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:gravity="center_horizontal"
+                                    android:text=" 24% off"
+                                    android:textColor="@color/txt_color_3" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--spatu-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:src="@drawable/woman_black_bag" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:gravity="center_horizontal"
+                                android:text="FS - QUILTED MAXI CROS..."
+                                android:fontFamily="@font/poppins_bold"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:gravity="center_horizontal"
+                                android:text="$299,43"
+                                android:textColor="@color/primary"
+                                android:layout_marginTop="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="534,33" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:gravity="center_horizontal"
+                                    android:text=" 24% off"
+                                    android:textColor="@color/txt_color_3" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--tas-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:src="@drawable/nikeairred" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center_horizontal"
+                                android:text="FS - Nike Air Max 270 React..."
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_horizontal"
+                                android:text="$299,43"
+                                android:textColor="@color/primary" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="534,33" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:gravity="center_horizontal"
+                                    android:text=" 24% off"
+                                    android:textColor="@color/txt_color_3" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_addToCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Add To Cart"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

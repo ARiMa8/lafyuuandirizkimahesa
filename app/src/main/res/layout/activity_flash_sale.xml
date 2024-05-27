@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <!--  search fav notif-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/flash_sale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="30dp"
+            android:text="Super Flash Sale"
+            android:fontFamily="@font/poppins_bold"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_explore" />
+
+    </LinearLayout>
+
+    <!--  carousel effect, categori , flash sale , mega sale, recomended product  -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/promoimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+
+                    android:src="@drawable/promo1" />
+
+                <!-- promotion period-->
+
+                <TextView
+                    android:id="@+id/TextCarosel"
+                    android:layout_width="230dp"
+                    android:layout_height="70dp"
+                    android:layout_alignEnd="@+id/promoimage"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="71dp"
+                    android:layout_marginEnd="87dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Super Flash Sale 50% Off"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="372dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/promoimage"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="7dp"
+                    android:src="@drawable/slideshow" />
+
+            </RelativeLayout>
+
+            <!--categori-->
+
+
+
+
+
+            <!--mega sale-->
+
+
+            <!-- recomended product-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <!-- Row 1 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="8dp">
+
+                        <!-- Gambar -->
+                        <ImageView
+                            android:id="@+id/image1"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/nikeairblue" />
+
+                        <!-- Teks -->
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/image1"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="8dp"
+                            android:text="Nike Air Max 270 React ENG"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <!-- Rating Bintang -->
+                        <RatingBar
+                            android:id="@+id/rating1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text1"
+                            android:layout_alignStart="@id/text1"
+                            android:layout_marginStart="-49dp"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:scaleX="0.55"
+                            android:scaleY="0.55"
+                            android:stepSize="1"
+                            android:layout_marginTop="4dp" />
+
+                        <!-- Harga -->
+                        <TextView
+                            android:id="@+id/price1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rating1"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:text="299,43"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                        <!-- Diskon Price -->
+
+                        <TextView
+                            android:id="@+id/discount1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/price1"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="15dp"
+                            android:text="$534,33"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="8dp">
+
+                        <!-- Gambar -->
+                        <ImageView
+                            android:id="@+id/image2"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/megatas" />
+
+                        <!-- Teks -->
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/image2"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="8dp"
+                            android:text="Nike Air Max 270 React ENG"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <!-- Rating Bintang -->
+                        <RatingBar
+                            android:id="@+id/rating2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text2"
+                            android:layout_alignStart="@id/text2"
+                            android:layout_marginStart="-49dp"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:scaleX="0.55"
+                            android:scaleY="0.55"
+                            android:stepSize="1"
+                            android:layout_marginTop="4dp" />
+
+                        <!-- Harga -->
+                        <TextView
+                            android:id="@+id/price2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rating2"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:text="299,43"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                        <!-- Diskon Price -->
+                        <TextView
+                            android:id="@+id/discount2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/price2"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:text="$543,33"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="8dp">
+
+                        <!-- Gambar -->
+                        <ImageView
+                            android:id="@+id/image3"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/womanvalinabag" />
+
+                        <!-- Teks -->
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/image3"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="8dp"
+                            android:text="Nike Air Max 270 React ENG"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <!-- Rating Bintang -->
+                        <RatingBar
+                            android:id="@+id/rating3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text3"
+                            android:layout_alignStart="@id/text3"
+                            android:layout_marginStart="-49dp"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:scaleX="0.55"
+                            android:scaleY="0.55"
+                            android:stepSize="1"
+                            android:layout_marginTop="4dp" />
+
+                        <!-- Harga -->
+                        <TextView
+                            android:id="@+id/price3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rating3"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:text="299,43"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                        <!-- Diskon Price -->
+                        <TextView
+                            android:id="@+id/discount3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/price3"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="15dp"
+                            android:text="$534,33"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="8dp">
+
+                        <!-- Gambar -->
+                        <ImageView
+                            android:id="@+id/image4"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/nikeairred" />
+
+                        <!-- Teks -->
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/image4"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="8dp"
+                            android:text="Nike Air Max 270 React ENG"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <!-- Rating Bintang -->
+                        <RatingBar
+                            android:id="@+id/rating4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text4"
+                            android:layout_alignStart="@id/text4"
+                            android:layout_marginStart="-49dp"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:scaleX="0.55"
+                            android:scaleY="0.55"
+                            android:stepSize="1"
+                            android:layout_marginTop="4dp" />
+
+                        <!-- Harga -->
+                        <TextView
+                            android:id="@+id/price4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rating4"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:text="299,43"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                        <!-- Diskon Price -->
+                        <TextView
+                            android:id="@+id/discount4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/price4"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:text="$534,33"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
